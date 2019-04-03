@@ -1,0 +1,47 @@
+body {
+    background: url('../img/img1.jpg') no-repeat center center fixed;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.button {
+    display: inline-block;
+    border-radius: 4px;
+    background-color: #0077ff;
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 12px;
+    padding: 8px;
+    width: 120px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+}
+
+.button span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+
+.button span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -12px;
+    transition: 0.5s;
+}
+
+.button:hover span {
+    padding-right: 14px;
+}
+
+.button:hover span:after {
+    opacity: 1;
+    right: 0;
+}
