@@ -1,6 +1,9 @@
 body {
-    background: url('img/img1.jpg') center fixed no-repeat;
+    background: url('../img/img1.jpg') center fixed no-repeat;
+    background-attachment: fixed;
+    position: relative;
     background-size: cover;
+    overflow:hidden;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -11,12 +14,14 @@ link {
     filter: invert(1);
 }
 
+
 .container {
+    position: relative;
     width: 100%;
-    padding-right: 15px;
-    padding-left: 15px;
-    margin-right: auto;
-    margin-left: auto
+    padding-top: 50%;
+    margin: auto auto;
+
+    align-items: center!important;
 }
 
 .posisibtn {
@@ -67,28 +72,26 @@ link {
     right: 0;
 }
 
-
-
 @media (min-width:576px) {
     .container {
-        max-width: 540px
+        max-width: 540px;
     }
 }
 
 @media (min-width:768px) {
     .container {
-        max-width: 720px
+        max-width: 720px;
     }
 }
 
 @media (min-width:992px) {
     .container {
-        max-width: 960px
+        max-width: 960px;
     }
 }
 
 @media (min-width:1200px) {
     .container {
-        max-width: 1140px
+        max-width: 1140px;
     }
 }

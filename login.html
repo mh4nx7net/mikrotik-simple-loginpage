@@ -2,64 +2,59 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <!-- <meta http-equiv="refresh" content="0; url=http://www.google.com"> -->
-  <meta http-equiv="pragma" content="no-cache">
-  <title>ISI Yogyakarta</title>
-  <script type="text/javascript">
-    document.write(unescape('%3c%6c%69%6e%6b%20%72%65%6c%3d%22%73%74%79%6c%65%73%68%65%65%74%22%20%68%72%65%66%3d%22%63%73%73%2f%62%6f%6f%74%73%74%72%61%70%2e%6d%69%6e%2e%63%73%73%22%3e%0d%0a%20%20%20%20%3c%6c%69%6e%6b%20%72%65%6c%3d%22%73%74%79%6c%65%73%68%65%65%74%22%20%68%72%65%66%3d%22%63%73%73%2f%6c%6f%67%69%6e%69%73%69%2e%63%73%73%22%3e'));
-  </script>
-  <link rel="shortcut icon" type="image/png" href="img/favico.png" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta http-equiv="pragma" content="no-cache">
+    <!-- <meta http-equiv="refresh" content="0; url=http://www.google.com"> -->
+    <title>Mikocok Login</title>
+    <link rel="stylesheet" href="css/login.css">
+    <link rel="shortcut icon" href="img/icon.png" type="image/x-icon">
 </head>
 
-<body class="text-center">
-  $(if chap-id)
-  <!-- script autologin -->
-  <form name="sendin" action="$(link-login-only)" method="post">
-    <input type="hidden" name="username" />
-    <input type="hidden" name="password" />
-    <input type="hidden" name="dst" value="$(link-orig)" />
-    <input type="hidden" name="popup" value="true" />
-  </form>
-  <script type="text/javascript" src="/md5.js"></script>
-  <!-- tebak apa hayo -->
-  <script type="text/javascript">
-    function doLogin() {
-      document.sendin.username.value = document.login.username.value;
-      document.sendin.password.value = hexMD5('$(chap-id)' + document.login.password.value + '$(chap-challenge)');
-      document.sendin.submit();
-      return false;
-    }
-  </script>
-  $(endif)
+<body>
 
-  <header class="xmain">
-    <div class="container d-flex justify-content-center align-items-center">
-      <form name="login" action="$(link-login-only)" method="post" $(if chap-id) onSubmit="return doLogin()" $(endif)>
+    $(if chap-id)
+    <!-- script autologin -->
+    <form name="sendin" action="$(link-login-only)" method="post">
+        <input type="hidden" name="username" />
+        <input type="hidden" name="password" />
         <input type="hidden" name="dst" value="$(link-orig)" />
         <input type="hidden" name="popup" value="true" />
-        <script type="text/javascript">
-          document.write(unescape('%3c%69%6e%70%75%74%20%6e%61%6d%65%3d%22%75%73%65%72%6e%61%6d%65%22%20%70%6c%61%63%65%68%6f%6c%64%65%72%3d%22%61%70%61%61%6e%6c%75%22%20%74%79%70%65%3d%22%68%69%64%64%65%6e%22%20%76%61%6c%75%65%3d%22%75%73%65%72%31%22%3e%0d%0a%20%20%20%20%20%20%20%20%3c%69%6e%70%75%74%20%6e%61%6d%65%3d%22%70%61%73%73%77%6f%72%64%22%20%70%6c%61%63%65%68%6f%6c%64%65%72%3d%22%61%70%61%61%6e%6c%75%22%20%74%79%70%65%3d%22%68%69%64%64%65%6e%22%20%76%61%6c%75%65%3d%22%75%73%65%72%31%22%3e'));
-        </script>
-        <button name="submit" type="submit" class="button" style="vertical-align:middle"><span>HUBUNGKAN</span></button>
-      </form>
-    </div>
-  </header>
-  <footer class="fixed-bottom bg-dark text-white-50">
+    </form>
+    <script type="text/javascript" src="/md5.js"></script>
+    <script type="text/javascript">
+        function doLogin() {
+            document.sendin.username.value = document.login.username.value;
+            document.sendin.password.value = hexMD5('$(chap-id)' + document.login.password.value + '$(chap-challenge)');
+            document.sendin.submit();
+            return false;
+        }
+    </script>
+    $(endif)
+
     <div class="container">
-      ISI Yogyakarta    |    2019
+        <div class="box">
+            <form name="login" action="$(link-login-only)" method="post" $(if chap-id) onSubmit="return doLogin()"
+                $(endif)>
+                <script type="text/javascript">
+                    document.write(unescape('%3c%69%6e%70%75%74%20%74%79%70%65%3d%22%68%69%64%64%65%6e%22%20%6e%61%6d%65%3d%22%64%73%74%22%20%76%61%6c%75%65%3d%22%24%28%6c%69%6e%6b%2d%6f%72%69%67%29%22%20%2f%3e%0d%0a%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3c%69%6e%70%75%74%20%74%79%70%65%3d%22%68%69%64%64%65%6e%22%20%6e%61%6d%65%3d%22%70%6f%70%75%70%22%20%76%61%6c%75%65%3d%22%74%72%75%65%22%20%2f%3e%0d%0a%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3c%69%6e%70%75%74%20%69%64%3d%22%69%64%5f%66%69%6c%6c%78%22%20%6e%61%6d%65%3d%22%75%73%65%72%6e%61%6d%65%22%20%74%79%70%65%3d%22%68%69%64%64%65%6e%22%20%76%61%6c%75%65%3d%22%22%3e%0d%0a%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3c%69%6e%70%75%74%20%69%64%3d%22%70%77%5f%66%69%6c%6c%78%22%20%6e%61%6d%65%3d%22%70%61%73%73%77%6f%72%64%22%20%74%79%70%65%3d%22%68%69%64%64%65%6e%22%20%76%61%6c%75%65%3d%22%22%3e'));
+                </script>
+                <button name="submit" type="submit" class="posisibtn button"><span>HUBUNGKAN</span></button>
+            </form>
+
+        </div>
     </div>
-  </footer>
-  <!-- if error alert -->
-  $(if error)
-  <script>alert("terjadi kesalahan");</script>
-  $(endif)
-  <!-- biar gak gagal pokus -->
-  <script type="text/javascript">
-    document.login.submit.focus();
-  </script>
+    $(if error)
+    <script>alert("terjadi kesalahan");</script>
+    $(endif)
+    <!-- autopokus -->
+    <script type="text/javascript">
+        document.login.submit.focus();
+    </script>
+    <!-- where we are -->
+    <script src="auth.js"></script>
+    <script src="js/javascript.js"></script>
 </body>
 
 </html>
